@@ -12,7 +12,7 @@ public class StatisticsServiceTest {
     }
     @Test
 void findMaxWithEmptyArray() {
-     if (incomes.length == 0) {
+     if (incomes.length == 0) 
         return 0;
     }
     StatisticsService service = new StatisticsService();
