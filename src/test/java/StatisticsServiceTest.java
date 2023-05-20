@@ -10,7 +10,14 @@ public class StatisticsServiceTest {
         long actual = service.findMax(incomesInBillions);
         Assertions.assertEquals(expected, actual);
     }
-    
+    @Test
+void findMaxWithEmptyArray() {
+    StatisticsService service = new StatisticsService();
+    long[] incomesInBillions = {};
+    long expected = 0;
+    long actual = service.findMax(incomesInBillions);
+    Assertions.assertEquals(expected, actual);
+}
     @Test
     void findCycle() {
         StatisticsService service = new StatisticsService();
