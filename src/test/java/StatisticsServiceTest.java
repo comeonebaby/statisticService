@@ -43,5 +43,5 @@ void findMaxFromNegativeIncomes() {
     long actual = service.findMax(incomesInBillions);
     Assertions.assertEquals(expected, actual);
 }
-
+}
 
