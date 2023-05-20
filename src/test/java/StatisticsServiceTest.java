@@ -11,11 +11,18 @@ public class StatisticsServiceTest {
         Assertions.assertEquals(expected, actual);
     }
     @Test
-void findMaxWithEmptyArray() {
-   
+void findMaxAllEqual() {
     StatisticsService service = new StatisticsService();
-    long[] incomesInBillions = {};
-    long expected = 0;
+    long[] incomesInBillions = {1, 1, 1, 1, 1, 1, 1, 1};
+    long expected = 1;
+    long actual = service.findMax(incomesInBillions);
+    Assertions.assertEquals(expected, actual);
+}
+    @Test
+void findMaxFirstLess() {
+    StatisticsService service = new StatisticsService();
+    long[] incomesInBillions = {1, 10, 6, 8, 4, 5, 3, 8, 6, 11, 11, 12};
+    long expected = 12;
     long actual = service.findMax(incomesInBillions);
     Assertions.assertEquals(expected, actual);
 }
